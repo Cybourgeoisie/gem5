@@ -3,7 +3,18 @@ Lab group at Penn State University. The fork is kept up-to-date with
 the upstream repository, but additions are made to accommodate research
 into examining applications memory footprints.
 
-As the additions are made, this README will document all of the additional flags and options for running gem5.
+As the additions are made, this README will document all of the
+additional flags and options for running gem5.
+
+# Additional Flags
+- SCLCacheCompact
+   - Displays cache accesses: assembly command, memory address, and 
+   whether it was a hit or miss
+- SCLCacheCompactWithInstructions
+   - Displays the above for both data and instruction caches
+- SCLCacheDoublePlusCompact
+   - Displays cache accesses, but only assembly command and whether 
+   it was a hit or miss
 
 --
 
