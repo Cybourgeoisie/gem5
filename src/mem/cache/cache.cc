@@ -357,7 +357,13 @@ Cache::access(PacketPtr pkt, CacheBlk *&blk, Cycles &lat,
     // SCL
     if (!pkt->req->isInstFetch())
     {
-        // Add custom logic here.
+        DPRINTF(SCLCacheCompact, "%s %x %s\n", pkt->cmdString(), pkt->getAddr(), blk ? "hit" : "miss");
+        DPRINTF(SCLCacheCompactWithInstructions, "%s %x %s\n", pkt->cmdString(), pkt->getAddr(), blk ? "hit" : "miss");
+        DPRINTF(SCLCacheDoublePlusCompact, "%s %s\n", pkt->cmdString(), blk ? "hit" : "miss");
+    }
+    else
+    {
+        DPRINTF(SCLCacheCompactWithInstructions, "%s %x %s\n", pkt->cmdString(), pkt->getAddr(), blk ? "hit" : "miss");
     }
 
     if (pkt->isEviction()) {
