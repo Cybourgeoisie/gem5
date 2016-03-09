@@ -354,6 +354,12 @@ Cache::access(PacketPtr pkt, CacheBlk *&blk, Cycles &lat,
             blk ? "hit " + blk->print() : "miss");
 
 
+    // SCL
+    if (!pkt->req->isInstFetch())
+    {
+        // Add custom logic here.
+    }
+
     if (pkt->isEviction()) {
         // We check for presence of block in above caches before issuing
         // Writeback or CleanEvict to write buffer. Therefore the only

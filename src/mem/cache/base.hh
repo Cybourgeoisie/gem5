@@ -72,6 +72,11 @@
 #include "sim/sim_exit.hh"
 #include "sim/system.hh"
 
+// SCL
+#include "debug/SCLCacheCompact.hh"
+#include "debug/SCLCacheCompactWithInstructions.hh"
+#include "debug/SCLCacheDoublePlusCompact.hh"
+
 class MSHR;
 /**
  * A basic cache interface. Implements some common functions for speed.
