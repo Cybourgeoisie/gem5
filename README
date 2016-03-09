@@ -1,3 +1,11 @@
+This fork of gem5 is intended for use within the Scalable Computing Lab group at Penn State University. 
+The fork is kept up-to-date with the upstream repository, but additions are made to accommodate research
+into examining applications memory footprints.
+
+As the additions are made, this README will document all of the additional flags and options for running gem5.
+
+--
+
 This is the gem5 simulator.
 
 The main website can be found at http://www.gem5.org
